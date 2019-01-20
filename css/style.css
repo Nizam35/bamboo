@@ -2,12 +2,13 @@
 
 *{
     box-sizing: border-box;
+    margin:0;
 }
 body{
     font-family:'Roboto',sans-serif;
     font-weight:300;
     /* background:#6fecfd; */
-    background:#181818;
+    background:#060807;
     color:#fff;
     overflow:hidden;
 }
@@ -84,34 +85,48 @@ a{
     display:flex;
     flex-direction: row;
     /* background-color:red; */
-    width:100%;
+    width:80%;
     margin-bottom:20px;
+    margin-top:30px;
+    justify-content: center;
+    align-items: center;
+    /* height:10vh; */
+   
 }
 .bar{
-    width:30%;
-    height:.5px;
+  
+   flex:auto;
+    border:none;
+    background:#aaa;
+    height:1px;
+}
+.or span{
+    margin:10px;
 }
 #main-footer{
     margin-top:3rem;
     text-align:center;
-    font-weight:600;
+    /* font-weight:600; */
     font-size:.9rem;
+    line-height:2rem;
 }
 #main-footer a{
-    color:#ff7b39;
+    color:#2684ff;
+    
 }
 
 
 /* Right */
 #right{
     flex:1;
+    background:#211f20;
 }
 #sign-in .btn-primary{
     width:100%;
 }
 
 #sign-in .btn-primary:hover{
-    background:#ff7b39;
+    background:#2684ff;
 }
 
 #sign-in .btn-secondary{
@@ -119,9 +134,8 @@ a{
     
 }
 #sign-in .btn-secondary:hover{
-    background:#f4f4f4;
-    color:#444;
-    font-weight:700;
+    border:1px solid #2684ff;;
+    color:#2684ff;;
 }
 /* Buttons */
 .btn-primary{
@@ -130,7 +144,7 @@ a{
     border:0;
     border-radius:2px;
     font-weight:500;
-    background:#f96816;
+    background:#2684ff;;
     color:#fff;
     cursor:pointer;
     text-align:center;
@@ -159,7 +173,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+    /* background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover; */
     height: 100vh;
     text-align: center;
   }
@@ -173,13 +187,17 @@ a{
   
   #showcase .btn-secondary {
     width: 60%;
-    margin: auto;
+    margin: 20px auto;
+
   }
   
   #showcase .btn-secondary:hover{
-    background:#f4f4f4;
-    color:#444;
-    font-weight:700;
+    border:1px solid #2684ff;
+    color:#2684ff;
+    
+}
+#showcase-text{
+    font-size:2rem;
 }
 /* medai Queries */
 
@@ -192,12 +210,16 @@ a{
     }
 }
 
-@media only screen and (max-width:580px){
+@media only screen and (max-width:700px){
     body{
         overflow:scroll;
     }
-    #wrapper{
-        flex-direction:column;
+    #right{
+        display:none;
+    }
+    #left{
+        justify-content: start;
+        margin: 50px 0 0 0 ;
     }
 }
 
